@@ -10,6 +10,6 @@ struct JodHaiApp: App {
                     JodHaiShortcuts.updateAppShortcutParameters()
                 }
         }
-        .modelContainer(for: ExpenseModel.self)
+        .modelContainer(for: [ExpenseModel.self, BudgetModel.self, IncomeModel.self])
     }
 }

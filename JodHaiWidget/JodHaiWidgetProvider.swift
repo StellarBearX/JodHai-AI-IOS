@@ -41,7 +41,7 @@ struct JodHaiWidgetProvider: TimelineProvider {
             date: .now,
             todayTotal: 1_250,
             recentItems: [
-                WidgetExpenseItem(id: UUID(), amount: 450, category: "Food", note: "Lunch"),
+                WidgetExpenseItem(id: UUID(), amount: 450, category: "Food",      note: "Lunch"),
                 WidgetExpenseItem(id: UUID(), amount: 800, category: "Transport", note: "BTS"),
             ],
             monthTotal: 12_400
@@ -49,43 +49,39 @@ struct JodHaiWidgetProvider: TimelineProvider {
     }
 
     func getSnapshot(in context: Context, completion: @escaping (JodHaiWidgetEntry) -> Void) {
-        Task { @MainActor in
-            completion(await fetchEntry())
-        }
+        completion(context.isPreview ? placeholder(in: context) : buildEntry())
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<JodHaiWidgetEntry>) -> Void) {
-        Task { @MainActor in
-            let entry = await fetchEntry()
-            // Refresh at the top of the next hour so totals stay current.
-            let nextUpdate = Calendar.current.nextDate(
-                after: .now,
-                matching: DateComponents(minute: 0),
-                matchingPolicy: .nextTime
-            ) ?? Date(timeIntervalSinceNow: 3600)
-            completion(Timeline(entries: [entry], policy: .after(nextUpdate)))
-        }
+        let entry = buildEntry()
+        let nextHour = Calendar.current.nextDate(
+            after: .now,
+            matching: DateComponents(minute: 0),
+            matchingPolicy: .nextTime
+        ) ?? Date(timeIntervalSinceNow: 3600)
+        completion(Timeline(entries: [entry], policy: .after(nextHour)))
     }
 
-    // MARK: - SwiftData fetch
-    // NOTE: Both the app and widget extension must belong to the same App Group
-    // and ModelContainer must be configured with the shared group URL for live data.
-    @MainActor
-    private func fetchEntry() async -> JodHaiWidgetEntry {
+    // MARK: - Synchronous SwiftData read
+    // ModelContext(container) is not actor-isolated, so it can be used on any
+    // thread — avoiding the Task / sending issue entirely in Swift 6.
+    // NOTE: App Group entitlement required so the widget reads the app's store.
+
+    private func buildEntry() -> JodHaiWidgetEntry {
         guard let container = try? ModelContainer(for: ExpenseModel.self) else {
-            return placeholder(in: .init(family: .systemSmall, isPreview: false))
+            return JodHaiWidgetEntry(date: .now, todayTotal: 0, recentItems: [], monthTotal: 0)
         }
-        let ctx = container.mainContext
+        let ctx = ModelContext(container)
 
         let cal = Calendar.current
-        let todayStart = cal.startOfDay(for: .now)
+        let todayStart    = cal.startOfDay(for: .now)
         let tomorrowStart = cal.date(byAdding: .day, value: 1, to: todayStart) ?? .distantFuture
-        let monthStart = cal.date(from: cal.dateComponents([.year, .month], from: .now)) ?? .distantPast
+        let monthStart    = cal.date(from: cal.dateComponents([.year, .month], from: .now)) ?? .distantPast
 
-        let allDescriptor = FetchDescriptor<ExpenseModel>(
+        let descriptor = FetchDescriptor<ExpenseModel>(
             sortBy: [SortDescriptor(\.date, order: .reverse)]
         )
-        let all = (try? ctx.fetch(allDescriptor)) ?? []
+        let all = (try? ctx.fetch(descriptor)) ?? []
 
         let todayTotal = all
             .filter { $0.date >= todayStart && $0.date < tomorrowStart }
@@ -107,7 +103,3 @@ struct JodHaiWidgetProvider: TimelineProvider {
         )
     }
 }
-
-// Expose ExpenseModel to the widget extension (separate target shares the same file)
-// by importing it from a shared framework, or by adding Data/Models/ExpenseModel.swift
-// to the widget extension target in Xcode.

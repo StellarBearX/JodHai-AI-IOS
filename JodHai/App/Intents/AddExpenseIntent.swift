@@ -4,13 +4,13 @@ import Foundation
 
 struct AddExpenseIntent: AppIntent {
 
-    static var title: LocalizedStringResource = "Log an Expense"
-    static var description = IntentDescription(
+    static let title: LocalizedStringResource = "Log an Expense"
+    static let description = IntentDescription(
         "Quickly log a new expense to Jod-Hai without opening the app.",
         categoryName: "Finance"
     )
     // Background execution — no need to launch the app UI.
-    static var openAppWhenRun: Bool = false
+    static let openAppWhenRun: Bool = false
 
     // MARK: - Parameters
 
@@ -55,13 +55,5 @@ struct AddExpenseIntent: AppIntent {
                 "Done! I've logged a **\(category.rawValue)** expense of \(formattedAmount) in Jod-Hai."
             )
         )
-    }
-}
-
-// MARK: - Currency helper (mirrors DesignSystem — available here without UI import)
-
-private extension Double {
-    func asCurrency(code: String = "THB") -> String {
-        formatted(.currency(code: code).precision(.fractionLength(0...2)))
     }
 }

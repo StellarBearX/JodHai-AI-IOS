@@ -81,7 +81,7 @@ struct SpendBarChart: View {
                     y: .value("Spend", animated ? day.amount : 0)
                 )
                 .foregroundStyle(barGradient(for: day))
-                .cornerRadius(9, style: .continuous)
+                .clipShape(.rect(cornerRadius: 9, style: .continuous))
                 // Highlight selection
                 .opacity(selectedDay == nil || selectedDay?.id == day.id ? 1 : 0.4)
             }
@@ -112,7 +112,7 @@ struct SpendBarChart: View {
         .chartYAxis(.hidden)
         .chartPlotStyle { plot in
             plot.background(Color.white.opacity(0.03))
-                .cornerRadius(12, style: .continuous)
+                .clipShape(.rect(cornerRadius: 12, style: .continuous))
         }
         .chartOverlay { proxy in
             GeometryReader { geo in

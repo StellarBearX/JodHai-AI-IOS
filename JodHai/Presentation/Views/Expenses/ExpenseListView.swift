@@ -4,12 +4,13 @@ import SwiftData
 struct ExpenseListView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(AppNavigationState.self) private var navState
+    @Environment(LanguageManager.self) private var lang
     @State private var viewModel = ExpenseListViewModel()
 
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(red: 0.04, green: 0.06, blue: 0.03)
+                Color(red: 0.91, green: 0.97, blue: 0.86)
                     .ignoresSafeArea()
 
                 if viewModel.expenses.isEmpty && !viewModel.isAddSheetPresented {
@@ -23,11 +24,19 @@ struct ExpenseListView: View {
                                 .listRowInsets(
                                     EdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 20)
                                 )
+                                .swipeActions(edge: .leading) {
+                                    Button {
+                                        viewModel.startEditing(expense)
+                                    } label: {
+                                        Label("แก้ไข", systemImage: "pencil")
+                                    }
+                                    .tint(Color.matchaGreen)
+                                }
                                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                     Button(role: .destructive) {
                                         Task { await viewModel.delete(expense: expense) }
                                     } label: {
-                                        Label("Delete", systemImage: "trash.fill")
+                                        Label("ลบ", systemImage: "trash.fill")
                                     }
                                 }
                         }
@@ -37,10 +46,10 @@ struct ExpenseListView: View {
                     .refreshable { await viewModel.load() }
                 }
             }
-            .navigationTitle("Expenses")
+            .navigationTitle(lang.t("รายจ่าย", "Expenses"))
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.light, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -55,6 +64,9 @@ struct ExpenseListView: View {
                 }
             }
             .sheet(isPresented: $viewModel.isAddSheetPresented) {
+                AddExpenseSheet(viewModel: viewModel)
+            }
+            .sheet(isPresented: $viewModel.isEditSheetPresented) {
                 AddExpenseSheet(viewModel: viewModel)
             }
         }
@@ -80,10 +92,10 @@ struct ExpenseListView: View {
                 .foregroundStyle(.quaternary)
                 .symbolRenderingMode(.hierarchical)
             VStack(spacing: 6) {
-                Text("No Expenses Yet")
+                Text(lang.t("ยังไม่มีรายจ่าย", "No Expenses Yet"))
                     .font(.title3.bold())
                     .foregroundStyle(.secondary)
-                Text("Tap + to log your first expense")
+                Text(lang.t("แตะ + เพื่อบันทึกรายจ่ายแรก", "Tap + to log your first expense"))
                     .font(.subheadline)
                     .foregroundStyle(.tertiary)
             }

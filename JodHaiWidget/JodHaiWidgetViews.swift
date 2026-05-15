@@ -51,10 +51,9 @@ struct JodHaiSmallWidgetView: View {
         .padding(16)
         .containerBackground(for: .widget) {
             ZStack {
-                Color(red: 0.04, green: 0.07, blue: 0.03)
-                // Subtle gradient blob
+                Color(red: 0.91, green: 0.97, blue: 0.86)
                 RadialGradient(
-                    colors: [Color(red: 0.14, green: 0.24, blue: 0.10).opacity(0.6), .clear],
+                    colors: [Color(red: 0.75, green: 0.93, blue: 0.65).opacity(0.5), .clear],
                     center: .bottomLeading,
                     startRadius: 0,
                     endRadius: 120
@@ -126,7 +125,7 @@ struct JodHaiMediumWidgetView: View {
             .frame(maxHeight: .infinity)
 
             Divider()
-                .background(Color.white.opacity(0.1))
+                .background(Color.black.opacity(0.08))
 
             // Right column — recent expenses
             VStack(alignment: .leading, spacing: 6) {
@@ -166,9 +165,9 @@ struct JodHaiMediumWidgetView: View {
         .padding(16)
         .containerBackground(for: .widget) {
             ZStack {
-                Color(red: 0.04, green: 0.07, blue: 0.03)
+                Color(red: 0.91, green: 0.97, blue: 0.86)
                 RadialGradient(
-                    colors: [Color(red: 0.14, green: 0.24, blue: 0.10).opacity(0.5), .clear],
+                    colors: [Color(red: 0.75, green: 0.93, blue: 0.65).opacity(0.4), .clear],
                     center: .bottomLeading,
                     startRadius: 0,
                     endRadius: 160

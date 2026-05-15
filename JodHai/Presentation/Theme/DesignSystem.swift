@@ -3,12 +3,12 @@ import SwiftUI
 // MARK: - Brand Colors
 
 extension Color {
-    /// Deep matcha green — primary accent throughout the app.
-    static let matchaGreen = Color(red: 0.302, green: 0.502, blue: 0.200)
-    /// Brighter matcha for dark-mode text and highlights.
-    static let matchaGreenBright = Color(red: 0.420, green: 0.700, blue: 0.290)
-    /// Subtle white border for glass layers.
-    static let glassStroke = Color.white.opacity(0.11)
+    /// Deep matcha green — primary accent on light backgrounds.
+    static let matchaGreen = Color(red: 0.15, green: 0.40, blue: 0.08)
+    /// Vibrant matcha for highlights and amounts.
+    static let matchaGreenBright = Color(red: 0.20, green: 0.50, blue: 0.12)
+    /// Subtle dark border for glass layers on light backgrounds.
+    static let glassStroke = Color.black.opacity(0.07)
 }
 
 // MARK: - Category Model
@@ -64,7 +64,7 @@ struct GlassCardModifier: ViewModifier {
                 RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
                     .stroke(Color.glassStroke, lineWidth: 0.5)
             )
-            .shadow(color: .black.opacity(0.28), radius: 24, x: 0, y: 8)
+            .shadow(color: Color(red: 0.15, green: 0.40, blue: 0.08).opacity(0.12), radius: 16, x: 0, y: 6)
     }
 }
 

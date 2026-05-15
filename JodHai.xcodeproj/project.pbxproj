@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0250C9CBB0EE1F0CD8DA8B9A /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71023337E9939ABE646890E /* Income.swift */; };
+		068271FDBCFBF957AE28778E /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27915422CE96D93628FE0E24 /* ChatView.swift */; };
+		0EE423BCE0AA31EBA13161EC /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DFBE40DF67F1F8C5E8A85 /* ExpenseModel.swift */; };
+		0F2E337FFE5A98D71B88EBA5 /* VisionScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6473889090615D439C068FB5 /* VisionScannerService.swift */; };
+		18F3BC8BCB111D0254905199 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCB7270FA480FF36AE3D97 /* Budget.swift */; };
+		1B5B8FE0DCC1F0FC2C9850D3 /* SmartInsightsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6992B42BFFE32E571E8C7C /* SmartInsightsCard.swift */; };
+		1C4D3FC5E5F584327BDBE0D6 /* AddExpenseIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D79F34D1DC36EEBFC4813 /* AddExpenseIntent.swift */; };
+		1F216AF503A398A4FA1551B5 /* NLPExpenseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A250E5387F54B582D24171D /* NLPExpenseParser.swift */; };
+		2286ECF02A4708BA8135B773 /* JodHaiWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2BEC1F449AB6F87D86761F /* JodHaiWidgetBundle.swift */; };
+		263E2780D2ECCEC861A2C214 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D1FD8EF704AC4EA7813F39 /* NotificationService.swift */; };
+		2E0328813EAF92533B00D931 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4477F60A5C639302DE110F60 /* ExpenseListView.swift */; };
+		32EDE6833C90809A5755607E /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979108B0640259789A5C113B /* ChatMessage.swift */; };
+		353527F6A1577BB179F544EE /* ExpenseIntentActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BA0A9BF7410039A6226ED /* ExpenseIntentActor.swift */; };
+		37C9ABE782816D0276A77697 /* ExpenseRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F878BE014C4644155C7E87 /* ExpenseRepositoryProtocol.swift */; };
+		3E48B97DD434277FEC0B255C /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD08D1320B931E40531B3448 /* BudgetViewModel.swift */; };
+		44990646956E5EF54C4FC11E /* JodHaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F3765D57365D7D249CD8D9 /* JodHaiApp.swift */; };
+		66A9E166CFCA7D845343E732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A6CAEFF58E0F4EA11D37B3 /* Assets.xcassets */; };
+		670DD2B889B4A517BA50DB38 /* JodHaiWidgetViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3DB576CA779B42BB24E17F /* JodHaiWidgetViews.swift */; };
+		71FDBD262CE155A012245215 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE2BDD2D23DB4127BB86DF5 /* WidgetKit.framework */; };
+		74836841837DFBDB6E252E16 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E0D2FF708DB24DF182A8C /* DesignSystem.swift */; };
+		787834F49642908DAEA5F818 /* IncomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2512315FEC20FA28CB3B234 /* IncomeRepositoryProtocol.swift */; };
+		79BAEAB87A16C48F83A0B3C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7EC24CE2347793EF2A44E6F /* ContentView.swift */; };
+		7B7EB55B1106562584496B54 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6EDE88201993A284C6F09A /* ChatViewModel.swift */; };
+		7CB8BF1D3EC0D7FFAC87B215 /* IncomeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD1D77F450750A3459D063 /* IncomeRepositoryImpl.swift */; };
+		80AE7B1B260D926BC7D6F53B /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4B9E57CE8D5934863A3E37 /* AppIntents.framework */; };
+		849B6C9D307B38CB6A689115 /* ExtractReceiptDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCBAF1802218688D24EEB99 /* ExtractReceiptDataUseCase.swift */; };
+		8707A4AE87BB4ADAC1486E26 /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DFBE40DF67F1F8C5E8A85 /* ExpenseModel.swift */; };
+		87D16AB9CDFA474AA990B721 /* BudgetRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B9A4B223C1F44C47CD9EE2 /* BudgetRepositoryProtocol.swift */; };
+		895B6BC14917FC6841FEE2D2 /* ExpenseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5525142868A56A360FA48A /* ExpenseListViewModel.swift */; };
+		8A904A22BD69B1C2DCAF715C /* AddExpenseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A805EA63325B539D7B1FA74 /* AddExpenseSheet.swift */; };
+		91CDDE96D6AB539DD856E0D7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928162270C5FA0372607E079 /* MainTabView.swift */; };
+		9E75847C27D70D764D930430 /* BudgetRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC945A1513BF40C1DDAECC8C /* BudgetRepositoryImpl.swift */; };
+		A4927BC06EB26194BD9C1C76 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379AFF27C852C2497C993517 /* SettingsView.swift */; };
+		A5BD9DDA449F45EE091B4153 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FDC3063BAE6B7964831C55 /* LanguageManager.swift */; };
+		AAC7A006D60D2793400A8730 /* JodHaiWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 098F600F29C467CEDC7FAC0B /* JodHaiWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AD023975CEE65B2220FC2E26 /* CalculatePeriodSummaryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FCBBB09A4430BDDF180F6D /* CalculatePeriodSummaryUseCase.swift */; };
+		B0DB845D45B02EFC2C73C14E /* AppNavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03C325F9FE575C666BC8842 /* AppNavigationState.swift */; };
+		B3CE198C0F9B8391488059F4 /* JodHaiShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3507F68247699E19608318 /* JodHaiShortcuts.swift */; };
+		B5D22BF4C1AB61748A7F702C /* SwiftData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E310D9AA8CBA26763307E9C /* SwiftData.framework */; };
+		C3755C13BBBE0E84CB207052 /* LogExpenseWidgetIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425990AD1DBC5977EBEA0272 /* LogExpenseWidgetIntent.swift */; };
+		C3A8E3AC1FAB1AB21CF36EE9 /* BudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7201C14565579D607E3C0FC /* BudgetModel.swift */; };
+		C84DA1171814FA8DC0257692 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C11CF390A9C395D020AF1A4 /* Expense.swift */; };
+		D62B84A7726FCE5E0875852D /* IncomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911480F48A77EB4FEC6F85DE /* IncomeModel.swift */; };
+		D64698266183DFCE59EA4A27 /* SpendBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2D14BBBA8650D6E398DD6 /* SpendBarChart.swift */; };
+		D7A511D1EC5368F15B8D49DA /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55168485B95DCDC3C9A1D6A0 /* DashboardView.swift */; };
+		DEE98AD2703D7B511C041037 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92843FBF6F2C353A89670B39 /* SwiftUI.framework */; };
+		E127E845B5F7030FB1AFC600 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CE692B73CBD05ECE85DCBA /* BudgetView.swift */; };
+		E58E8E240CAD99FB85F5FC1B /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C11CF390A9C395D020AF1A4 /* Expense.swift */; };
+		EA3C9456805E45A3575E9728 /* ExpenseCategoryAppEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FDF622712347688299941 /* ExpenseCategoryAppEnum.swift */; };
+		EB9906C2DD57354160B747CD /* ExpenseRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F1C55EFF96ECB0BE4F140 /* ExpenseRepositoryImpl.swift */; };
+		EE4790F98A81DF935AFD417D /* JodHaiWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0A1ADCCE6AEFCE43F4546 /* JodHaiWidgetProvider.swift */; };
+		F6240EBFC322AAF1553B86C7 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC4A07095B1A8DB22840706 /* DashboardViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EE2F69B6533BC894A2D517B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 289BA059EAE36A25ED1288BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6271C33C2D10AC80344AD7F0;
+			remoteInfo = JodHaiWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEB5DA016EE964FB1F0582D5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AAC7A006D60D2793400A8730 /* JodHaiWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		098F600F29C467CEDC7FAC0B /* JodHaiWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JodHaiWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E9E0D2FF708DB24DF182A8C /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		1C11CF390A9C395D020AF1A4 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		1E310D9AA8CBA26763307E9C /* SwiftData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftData.framework; path = System/Library/Frameworks/SwiftData.framework; sourceTree = SDKROOT; };
+		27915422CE96D93628FE0E24 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		2E4B9E57CE8D5934863A3E37 /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = System/Library/Frameworks/AppIntents.framework; sourceTree = SDKROOT; };
+		31FCBBB09A4430BDDF180F6D /* CalculatePeriodSummaryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePeriodSummaryUseCase.swift; sourceTree = "<group>"; };
+		379AFF27C852C2497C993517 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		425990AD1DBC5977EBEA0272 /* LogExpenseWidgetIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogExpenseWidgetIntent.swift; sourceTree = "<group>"; };
+		4477F60A5C639302DE110F60 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
+		4A805EA63325B539D7B1FA74 /* AddExpenseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseSheet.swift; sourceTree = "<group>"; };
+		55168485B95DCDC3C9A1D6A0 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		57FDC3063BAE6B7964831C55 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		62B9A4B223C1F44C47CD9EE2 /* BudgetRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRepositoryProtocol.swift; sourceTree = "<group>"; };
+		6473889090615D439C068FB5 /* VisionScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionScannerService.swift; sourceTree = "<group>"; };
+		6701C4DA184836E864B91F29 /* JodHai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JodHai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DC4A07095B1A8DB22840706 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		7ED2D14BBBA8650D6E398DD6 /* SpendBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendBarChart.swift; sourceTree = "<group>"; };
+		82F878BE014C4644155C7E87 /* ExpenseRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRepositoryProtocol.swift; sourceTree = "<group>"; };
+		8A250E5387F54B582D24171D /* NLPExpenseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLPExpenseParser.swift; sourceTree = "<group>"; };
+		911480F48A77EB4FEC6F85DE /* IncomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeModel.swift; sourceTree = "<group>"; };
+		923FDF622712347688299941 /* ExpenseCategoryAppEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseCategoryAppEnum.swift; sourceTree = "<group>"; };
+		928162270C5FA0372607E079 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		92843FBF6F2C353A89670B39 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		979108B0640259789A5C113B /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		9A3DB576CA779B42BB24E17F /* JodHaiWidgetViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodHaiWidgetViews.swift; sourceTree = "<group>"; };
+		9C6992B42BFFE32E571E8C7C /* SmartInsightsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartInsightsCard.swift; sourceTree = "<group>"; };
+		9DA04F5F2CD97E623EE8ACD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A2512315FEC20FA28CB3B234 /* IncomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		A49D79F34D1DC36EEBFC4813 /* AddExpenseIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseIntent.swift; sourceTree = "<group>"; };
+		A6CE692B73CBD05ECE85DCBA /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		A7EC24CE2347793EF2A44E6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A8748CD5DA5683BB1D5A451B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AC8BA0A9BF7410039A6226ED /* ExpenseIntentActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseIntentActor.swift; sourceTree = "<group>"; };
+		AD08D1320B931E40531B3448 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
+		B6CCB7270FA480FF36AE3D97 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		B7201C14565579D607E3C0FC /* BudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModel.swift; sourceTree = "<group>"; };
+		BA2BEC1F449AB6F87D86761F /* JodHaiWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodHaiWidgetBundle.swift; sourceTree = "<group>"; };
+		BC945A1513BF40C1DDAECC8C /* BudgetRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetRepositoryImpl.swift; sourceTree = "<group>"; };
+		C6A6CAEFF58E0F4EA11D37B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC5525142868A56A360FA48A /* ExpenseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewModel.swift; sourceTree = "<group>"; };
+		CCE2BDD2D23DB4127BB86DF5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CD6EDE88201993A284C6F09A /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CF3507F68247699E19608318 /* JodHaiShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodHaiShortcuts.swift; sourceTree = "<group>"; };
+		D03C325F9FE575C666BC8842 /* AppNavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationState.swift; sourceTree = "<group>"; };
+		D33DFBE40DF67F1F8C5E8A85 /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
+		D3AD1D77F450750A3459D063 /* IncomeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeRepositoryImpl.swift; sourceTree = "<group>"; };
+		D5D1FD8EF704AC4EA7813F39 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		D71023337E9939ABE646890E /* Income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		D8E0A1ADCCE6AEFCE43F4546 /* JodHaiWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodHaiWidgetProvider.swift; sourceTree = "<group>"; };
+		EF3F1C55EFF96ECB0BE4F140 /* ExpenseRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRepositoryImpl.swift; sourceTree = "<group>"; };
+		F5F3765D57365D7D249CD8D9 /* JodHaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JodHaiApp.swift; sourceTree = "<group>"; };
+		FDCBAF1802218688D24EEB99 /* ExtractReceiptDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractReceiptDataUseCase.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ACD67EF2BE3614A4CDC6B81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71FDBD262CE155A012245215 /* WidgetKit.framework in Frameworks */,
+				DEE98AD2703D7B511C041037 /* SwiftUI.framework in Frameworks */,
+				B5D22BF4C1AB61748A7F702C /* SwiftData.framework in Frameworks */,
+				80AE7B1B260D926BC7D6F53B /* AppIntents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		038F5E45D13CA242E08531AB /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				55168485B95DCDC3C9A1D6A0 /* DashboardView.swift */,
+				9C6992B42BFFE32E571E8C7C /* SmartInsightsCard.swift */,
+				7ED2D14BBBA8650D6E398DD6 /* SpendBarChart.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		134E4EABF06ACE3A604AC6CD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				379AFF27C852C2497C993517 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		136FD9363DE363EF319BF792 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				31FCBBB09A4430BDDF180F6D /* CalculatePeriodSummaryUseCase.swift */,
+				FDCBAF1802218688D24EEB99 /* ExtractReceiptDataUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		1A8590225B2730BCF3C88B27 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AD08D1320B931E40531B3448 /* BudgetViewModel.swift */,
+				CD6EDE88201993A284C6F09A /* ChatViewModel.swift */,
+				7DC4A07095B1A8DB22840706 /* DashboardViewModel.swift */,
+				CC5525142868A56A360FA48A /* ExpenseListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3B92615D4579D2C3C3C50009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E4B9E57CE8D5934863A3E37 /* AppIntents.framework */,
+				1E310D9AA8CBA26763307E9C /* SwiftData.framework */,
+				92843FBF6F2C353A89670B39 /* SwiftUI.framework */,
+				CCE2BDD2D23DB4127BB86DF5 /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49C023951142212E15466ECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6701C4DA184836E864B91F29 /* JodHai.app */,
+				098F600F29C467CEDC7FAC0B /* JodHaiWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		505CAC18EE976B46C7FFC80C /* Budget */ = {
+			isa = PBXGroup;
+			children = (
+				A6CE692B73CBD05ECE85DCBA /* BudgetView.swift */,
+			);
+			path = Budget;
+			sourceTree = "<group>";
+		};
+		54F1F40C5468543E9A99AA23 /* JodHaiWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9DA04F5F2CD97E623EE8ACD9 /* Info.plist */,
+				BA2BEC1F449AB6F87D86761F /* JodHaiWidgetBundle.swift */,
+				D8E0A1ADCCE6AEFCE43F4546 /* JodHaiWidgetProvider.swift */,
+				9A3DB576CA779B42BB24E17F /* JodHaiWidgetViews.swift */,
+				425990AD1DBC5977EBEA0272 /* LogExpenseWidgetIntent.swift */,
+			);
+			path = JodHaiWidget;
+			sourceTree = "<group>";
+		};
+		57C2C79F501D5A927A0029FB = {
+			isa = PBXGroup;
+			children = (
+				CD5A4D725F5946E4BF4CFA47 /* JodHai */,
+				54F1F40C5468543E9A99AA23 /* JodHaiWidget */,
+				3B92615D4579D2C3C3C50009 /* Frameworks */,
+				49C023951142212E15466ECF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59306D72F3570939BE1AF975 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				62B9A4B223C1F44C47CD9EE2 /* BudgetRepositoryProtocol.swift */,
+				82F878BE014C4644155C7E87 /* ExpenseRepositoryProtocol.swift */,
+				A2512315FEC20FA28CB3B234 /* IncomeRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6EA0941C8AB4EF33A4DB9960 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8A250E5387F54B582D24171D /* NLPExpenseParser.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		75D9F0B1DF64996672EFD229 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				27915422CE96D93628FE0E24 /* ChatView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7D344D753C1B1072EED2201C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				505CAC18EE976B46C7FFC80C /* Budget */,
+				75D9F0B1DF64996672EFD229 /* Chat */,
+				038F5E45D13CA242E08531AB /* Dashboard */,
+				ECEE126A248713FD7C6EC77D /* Expenses */,
+				134E4EABF06ACE3A604AC6CD /* Settings */,
+				A7EC24CE2347793EF2A44E6F /* ContentView.swift */,
+				928162270C5FA0372607E079 /* MainTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80FCA35F03F676FB3C69DFDA /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				A49D79F34D1DC36EEBFC4813 /* AddExpenseIntent.swift */,
+				923FDF622712347688299941 /* ExpenseCategoryAppEnum.swift */,
+				AC8BA0A9BF7410039A6226ED /* ExpenseIntentActor.swift */,
+				CF3507F68247699E19608318 /* JodHaiShortcuts.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		8351E88B972E0C054D459F2D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DA635F38A62157E678DE4D43 /* Entities */,
+				59306D72F3570939BE1AF975 /* Repositories */,
+				6EA0941C8AB4EF33A4DB9960 /* Services */,
+				136FD9363DE363EF319BF792 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8BD7B8B45F9CF13165B261A0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9C46BFF7A884D751F8AE33F2 /* Theme */,
+				1A8590225B2730BCF3C88B27 /* ViewModels */,
+				7D344D753C1B1072EED2201C /* Views */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		9C46BFF7A884D751F8AE33F2 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				0E9E0D2FF708DB24DF182A8C /* DesignSystem.swift */,
+				57FDC3063BAE6B7964831C55 /* LanguageManager.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		A88D82E258F907659236F53F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E04B5716B54ED3B3505EEFDC /* Models */,
+				B7AE958A9813B9C588D0E341 /* Repositories */,
+				F5B56650E4E3B2846D31CF13 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B7AE958A9813B9C588D0E341 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BC945A1513BF40C1DDAECC8C /* BudgetRepositoryImpl.swift */,
+				EF3F1C55EFF96ECB0BE4F140 /* ExpenseRepositoryImpl.swift */,
+				D3AD1D77F450750A3459D063 /* IncomeRepositoryImpl.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CD5A4D725F5946E4BF4CFA47 /* JodHai */ = {
+			isa = PBXGroup;
+			children = (
+				DA483FAC75B67C6FE08000DF /* App */,
+				A88D82E258F907659236F53F /* Data */,
+				8351E88B972E0C054D459F2D /* Domain */,
+				8BD7B8B45F9CF13165B261A0 /* Presentation */,
+			);
+			path = JodHai;
+			sourceTree = "<group>";
+		};
+		DA483FAC75B67C6FE08000DF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				80FCA35F03F676FB3C69DFDA /* Intents */,
+				D03C325F9FE575C666BC8842 /* AppNavigationState.swift */,
+				C6A6CAEFF58E0F4EA11D37B3 /* Assets.xcassets */,
+				A8748CD5DA5683BB1D5A451B /* Info.plist */,
+				F5F3765D57365D7D249CD8D9 /* JodHaiApp.swift */,
+				D5D1FD8EF704AC4EA7813F39 /* NotificationService.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA635F38A62157E678DE4D43 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCB7270FA480FF36AE3D97 /* Budget.swift */,
+				979108B0640259789A5C113B /* ChatMessage.swift */,
+				1C11CF390A9C395D020AF1A4 /* Expense.swift */,
+				D71023337E9939ABE646890E /* Income.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E04B5716B54ED3B3505EEFDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7201C14565579D607E3C0FC /* BudgetModel.swift */,
+				D33DFBE40DF67F1F8C5E8A85 /* ExpenseModel.swift */,
+				911480F48A77EB4FEC6F85DE /* IncomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECEE126A248713FD7C6EC77D /* Expenses */ = {
+			isa = PBXGroup;
+			children = (
+				4A805EA63325B539D7B1FA74 /* AddExpenseSheet.swift */,
+				4477F60A5C639302DE110F60 /* ExpenseListView.swift */,
+			);
+			path = Expenses;
+			sourceTree = "<group>";
+		};
+		F5B56650E4E3B2846D31CF13 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6473889090615D439C068FB5 /* VisionScannerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DFA94F4CF3C94AC7A7C36E8 /* JodHai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 726F26A4D5A8BBEBD90F71E9 /* Build configuration list for PBXNativeTarget "JodHai" */;
+			buildPhases = (
+				B6175B0996977859DEBAE9B2 /* Sources */,
+				EF82B79D59A856AEC740DF36 /* Resources */,
+				BEB5DA016EE964FB1F0582D5 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C707360607A9A3145FFA023 /* PBXTargetDependency */,
+			);
+			name = JodHai;
+			packageProductDependencies = (
+			);
+			productName = JodHai;
+			productReference = 6701C4DA184836E864B91F29 /* JodHai.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6271C33C2D10AC80344AD7F0 /* JodHaiWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 923F1B58492F2FCDE8DC0751 /* Build configuration list for PBXNativeTarget "JodHaiWidgetExtension" */;
+			buildPhases = (
+				889CF75CE9428A227ED5E072 /* Sources */,
+				7ACD67EF2BE3614A4CDC6B81 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JodHaiWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = JodHaiWidgetExtension;
+			productReference = 098F600F29C467CEDC7FAC0B /* JodHaiWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		289BA059EAE36A25ED1288BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5DFA94F4CF3C94AC7A7C36E8 = {
+						ProvisioningStyle = Automatic;
+					};
+					6271C33C2D10AC80344AD7F0 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F07665E43090283ECCD46DC9 /* Build configuration list for PBXProject "JodHai" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 57C2C79F501D5A927A0029FB;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 49C023951142212E15466ECF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DFA94F4CF3C94AC7A7C36E8 /* JodHai */,
+				6271C33C2D10AC80344AD7F0 /* JodHaiWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF82B79D59A856AEC740DF36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A9E166CFCA7D845343E732 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		889CF75CE9428A227ED5E072 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E58E8E240CAD99FB85F5FC1B /* Expense.swift in Sources */,
+				8707A4AE87BB4ADAC1486E26 /* ExpenseModel.swift in Sources */,
+				2286ECF02A4708BA8135B773 /* JodHaiWidgetBundle.swift in Sources */,
+				EE4790F98A81DF935AFD417D /* JodHaiWidgetProvider.swift in Sources */,
+				670DD2B889B4A517BA50DB38 /* JodHaiWidgetViews.swift in Sources */,
+				C3755C13BBBE0E84CB207052 /* LogExpenseWidgetIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6175B0996977859DEBAE9B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C4D3FC5E5F584327BDBE0D6 /* AddExpenseIntent.swift in Sources */,
+				8A904A22BD69B1C2DCAF715C /* AddExpenseSheet.swift in Sources */,
+				B0DB845D45B02EFC2C73C14E /* AppNavigationState.swift in Sources */,
+				18F3BC8BCB111D0254905199 /* Budget.swift in Sources */,
+				C3A8E3AC1FAB1AB21CF36EE9 /* BudgetModel.swift in Sources */,
+				9E75847C27D70D764D930430 /* BudgetRepositoryImpl.swift in Sources */,
+				87D16AB9CDFA474AA990B721 /* BudgetRepositoryProtocol.swift in Sources */,
+				E127E845B5F7030FB1AFC600 /* BudgetView.swift in Sources */,
+				3E48B97DD434277FEC0B255C /* BudgetViewModel.swift in Sources */,
+				AD023975CEE65B2220FC2E26 /* CalculatePeriodSummaryUseCase.swift in Sources */,
+				32EDE6833C90809A5755607E /* ChatMessage.swift in Sources */,
+				068271FDBCFBF957AE28778E /* ChatView.swift in Sources */,
+				7B7EB55B1106562584496B54 /* ChatViewModel.swift in Sources */,
+				79BAEAB87A16C48F83A0B3C7 /* ContentView.swift in Sources */,
+				D7A511D1EC5368F15B8D49DA /* DashboardView.swift in Sources */,
+				F6240EBFC322AAF1553B86C7 /* DashboardViewModel.swift in Sources */,
+				74836841837DFBDB6E252E16 /* DesignSystem.swift in Sources */,
+				C84DA1171814FA8DC0257692 /* Expense.swift in Sources */,
+				EA3C9456805E45A3575E9728 /* ExpenseCategoryAppEnum.swift in Sources */,
+				353527F6A1577BB179F544EE /* ExpenseIntentActor.swift in Sources */,
+				2E0328813EAF92533B00D931 /* ExpenseListView.swift in Sources */,
+				895B6BC14917FC6841FEE2D2 /* ExpenseListViewModel.swift in Sources */,
+				0EE423BCE0AA31EBA13161EC /* ExpenseModel.swift in Sources */,
+				EB9906C2DD57354160B747CD /* ExpenseRepositoryImpl.swift in Sources */,
+				37C9ABE782816D0276A77697 /* ExpenseRepositoryProtocol.swift in Sources */,
+				849B6C9D307B38CB6A689115 /* ExtractReceiptDataUseCase.swift in Sources */,
+				0250C9CBB0EE1F0CD8DA8B9A /* Income.swift in Sources */,
+				D62B84A7726FCE5E0875852D /* IncomeModel.swift in Sources */,
+				7CB8BF1D3EC0D7FFAC87B215 /* IncomeRepositoryImpl.swift in Sources */,
+				787834F49642908DAEA5F818 /* IncomeRepositoryProtocol.swift in Sources */,
+				44990646956E5EF54C4FC11E /* JodHaiApp.swift in Sources */,
+				B3CE198C0F9B8391488059F4 /* JodHaiShortcuts.swift in Sources */,
+				A5BD9DDA449F45EE091B4153 /* LanguageManager.swift in Sources */,
+				91CDDE96D6AB539DD856E0D7 /* MainTabView.swift in Sources */,
+				1F216AF503A398A4FA1551B5 /* NLPExpenseParser.swift in Sources */,
+				263E2780D2ECCEC861A2C214 /* NotificationService.swift in Sources */,
+				A4927BC06EB26194BD9C1C76 /* SettingsView.swift in Sources */,
+				1B5B8FE0DCC1F0FC2C9850D3 /* SmartInsightsCard.swift in Sources */,
+				D64698266183DFCE59EA4A27 /* SpendBarChart.swift in Sources */,
+				0F2E337FFE5A98D71B88EBA5 /* VisionScannerService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C707360607A9A3145FFA023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6271C33C2D10AC80344AD7F0 /* JodHaiWidgetExtension */;
+			targetProxy = 2EE2F69B6533BC894A2D517B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BB68D0F782953F72C95D38E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7452D48YZL;
+				INFOPLIST_FILE = JodHai/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jodhai.app;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15A40B919D1D5BE6FDF21817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7452D48YZL;
+				INFOPLIST_FILE = JodHaiWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jodhai.app.widget;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29897EF3FC5337D1D9363400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		652908F01A24AA939D02C618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7452D48YZL;
+				INFOPLIST_FILE = JodHai/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jodhai.app;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADA92D69D6A4A9C548C2DE32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		CD01565CBC311C926416FE17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7452D48YZL;
+				INFOPLIST_FILE = JodHaiWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jodhai.app.widget;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		726F26A4D5A8BBEBD90F71E9 /* Build configuration list for PBXNativeTarget "JodHai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				652908F01A24AA939D02C618 /* Debug */,
+				0BB68D0F782953F72C95D38E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		923F1B58492F2FCDE8DC0751 /* Build configuration list for PBXNativeTarget "JodHaiWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD01565CBC311C926416FE17 /* Debug */,
+				15A40B919D1D5BE6FDF21817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F07665E43090283ECCD46DC9 /* Build configuration list for PBXProject "JodHai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA92D69D6A4A9C548C2DE32 /* Debug */,
+				29897EF3FC5337D1D9363400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 289BA059EAE36A25ED1288BE /* Project object */;
+}

@@ -3,6 +3,7 @@ import SwiftData
 
 struct DashboardView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(LanguageManager.self) private var lang
     @State private var viewModel = DashboardViewModel()
     @State private var animateGradient = false
 
@@ -28,7 +29,7 @@ struct DashboardView: View {
             .navigationTitle("Jod-Hai")
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.light, for: .navigationBar)
             .overlay(loadingOverlay)
         }
         .task {
@@ -55,15 +56,15 @@ struct DashboardView: View {
                 [0.0, 1.0], [0.5, 1.0], [1.0, 1.0],
             ],
             colors: [
-                Color(red: 0.04, green: 0.07, blue: 0.03),
-                Color(red: 0.06, green: 0.10, blue: 0.04),
-                Color(red: 0.03, green: 0.05, blue: 0.02),
-                Color(red: 0.08, green: 0.14, blue: 0.05),
-                Color(red: 0.15, green: 0.26, blue: 0.10),
-                Color(red: 0.07, green: 0.12, blue: 0.04),
-                Color(red: 0.02, green: 0.04, blue: 0.01),
-                Color(red: 0.05, green: 0.09, blue: 0.03),
-                Color(red: 0.03, green: 0.06, blue: 0.02),
+                Color(red: 0.90, green: 0.97, blue: 0.85),
+                Color(red: 0.94, green: 0.99, blue: 0.90),
+                Color(red: 0.87, green: 0.96, blue: 0.82),
+                Color(red: 0.83, green: 0.94, blue: 0.76),
+                Color(red: 0.74, green: 0.90, blue: 0.66),
+                Color(red: 0.88, green: 0.96, blue: 0.83),
+                Color(red: 0.86, green: 0.95, blue: 0.80),
+                Color(red: 0.92, green: 0.98, blue: 0.87),
+                Color(red: 0.89, green: 0.97, blue: 0.84),
             ]
         )
         .ignoresSafeArea()
@@ -73,7 +74,7 @@ struct DashboardView: View {
 
     private var totalSpendCard: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("Total Spend", systemImage: "chart.line.uptrend.xyaxis")
+            Label(lang.t("รายจ่ายทั้งหมด", "Total Spend"), systemImage: "chart.line.uptrend.xyaxis")
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(.secondary)
 
@@ -92,7 +93,7 @@ struct DashboardView: View {
                     .foregroundStyle(.tertiary)
                     .contentTransition(.numericText())
                     .animation(.spring(response: 0.4), value: viewModel.expenses.count)
-                Text("transactions total")
+                Text(lang.t("รายการทั้งหมด", "transactions total"))
                     .font(.caption)
                     .foregroundStyle(.tertiary)
             }
@@ -108,7 +109,7 @@ struct DashboardView: View {
     private var thisMonthCard: some View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 6) {
-                Label("This Month", systemImage: "calendar")
+                Label(lang.t("เดือนนี้", "This Month"), systemImage: "calendar")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
                 Text(viewModel.thisMonthTotal.asCurrency())
@@ -123,7 +124,7 @@ struct DashboardView: View {
                 .opacity(0.3)
             Spacer()
             VStack(alignment: .trailing, spacing: 6) {
-                Label("Count", systemImage: "number")
+                Label(lang.t("จำนวน", "Count"), systemImage: "number")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
                 Text("\(viewModel.thisMonthExpenses.count)")
@@ -157,7 +158,7 @@ struct DashboardView: View {
 
     private var categoriesSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Top Categories")
+            Text(lang.t("หมวดหมู่ยอดนิยม", "Top Categories"))
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.secondary)
                 .padding(.leading, 4)

@@ -7,6 +7,8 @@ import Observation
 final class ExpenseListViewModel {
     var expenses: [Expense] = []
     var isAddSheetPresented = false
+    var isEditSheetPresented = false
+    var editingExpense: Expense?
 
     // New-expense form fields
     var newAmount: String = ""
@@ -51,6 +53,35 @@ final class ExpenseListViewModel {
         resetForm()
     }
 
+    func startEditing(_ expense: Expense) {
+        editingExpense = expense
+        newAmount   = String(format: "%.2f", expense.amount)
+        newCategory = expense.category
+        newNote     = expense.note
+        newDate     = expense.date
+        isEditSheetPresented = true
+    }
+
+    func updateExpense() async {
+        guard let repository, let expense = editingExpense,
+              let amount = Double(newAmount), amount > 0 else { return }
+        var updated = expense
+        updated.amount = amount; updated.category = newCategory
+        updated.note = newNote;  updated.date = newDate
+        try? await repository.update(updated)
+        if let idx = expenses.firstIndex(where: { $0.id == expense.id }) {
+            expenses[idx] = updated
+        }
+        savedExpenseCount += 1
+        isEditSheetPresented = false
+        resetForm()
+    }
+
+    func cancelEdit() {
+        isEditSheetPresented = false
+        resetForm()
+    }
+
     func delete(expense: Expense) async {
         try? await repository?.delete(id: expense.id)
         expenses.removeAll { $0.id == expense.id }
@@ -70,9 +101,7 @@ final class ExpenseListViewModel {
         do {
             let result = try await useCase.execute(imageData: imageData)
             if let amount = result.amount {
-                withAnimation(.spring(response: 0.4)) {
-                    newAmount = String(format: "%.2f", amount)
-                }
+                newAmount = String(format: "%.2f", amount)
             } else {
                 scanErrorMessage = "No amount found on receipt. Please enter manually."
             }
@@ -82,9 +111,7 @@ final class ExpenseListViewModel {
     }
 
     private func resetForm() {
-        newAmount = ""
-        newCategory = ExpenseCategory.food.rawValue
-        newNote = ""
-        newDate = .now
+        newAmount = ""; newCategory = ExpenseCategory.food.rawValue
+        newNote = ""; newDate = .now; editingExpense = nil
     }
 }

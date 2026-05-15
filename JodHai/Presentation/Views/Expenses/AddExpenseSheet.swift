@@ -3,8 +3,11 @@ import PhotosUI
 
 struct AddExpenseSheet: View {
     @Bindable var viewModel: ExpenseListViewModel
+    @Environment(LanguageManager.self) private var lang
     @FocusState private var amountFocused: Bool
     @State private var scanPhotoItem: PhotosPickerItem?
+
+    private var isEditMode: Bool { viewModel.editingExpense != nil }
 
     var body: some View {
         NavigationStack {
@@ -20,13 +23,15 @@ struct AddExpenseSheet: View {
                 .padding(.top, 12)
                 .padding(.bottom, 32)
             }
-            .navigationTitle("New Expense")
+            .scrollDismissesKeyboard(.interactively)
+            .navigationTitle(isEditMode ? lang.t("แก้ไขรายจ่าย", "Edit Expense") : lang.t("รายจ่ายใหม่", "New Expense"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("Cancel") {
-                        viewModel.isAddSheetPresented = false
+                    Button(lang.t("ยกเลิก", "Cancel")) {
+                        if isEditMode { viewModel.cancelEdit() }
+                        else { viewModel.isAddSheetPresented = false }
                     }
                     .foregroundStyle(.secondary)
                 }
@@ -64,7 +69,7 @@ struct AddExpenseSheet: View {
     private var amountField: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Label("Amount", systemImage: "banknote.fill")
+                Label(lang.t("จำนวนเงิน", "Amount"), systemImage: "banknote.fill")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
                 Spacer()
@@ -118,7 +123,7 @@ struct AddExpenseSheet: View {
             HStack(spacing: 5) {
                 Image(systemName: "camera.viewfinder")
                     .font(.system(size: 13, weight: .semibold))
-                Text("Scan Receipt")
+                Text(lang.t("สแกนใบเสร็จ", "Scan Receipt"))
                     .font(.caption.weight(.semibold))
             }
             .foregroundStyle(Color.matchaGreenBright)
@@ -137,7 +142,7 @@ struct AddExpenseSheet: View {
 
     private var categoryPicker: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("Category", systemImage: "tag.fill")
+            Label(lang.t("หมวดหมู่", "Category"), systemImage: "tag.fill")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
                 .padding(.leading, 2)
@@ -188,11 +193,11 @@ struct AddExpenseSheet: View {
 
     private var noteField: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("Note", systemImage: "pencil")
+            Label(lang.t("หมายเหตุ", "Note"), systemImage: "pencil")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
 
-            TextField("Add a note (optional)", text: $viewModel.newNote)
+            TextField(lang.t("เพิ่มโน้ต (ไม่บังคับ)", "Add a note (optional)"), text: $viewModel.newNote)
                 .padding(.horizontal, 18)
                 .padding(.vertical, 16)
                 .glassCard(cornerRadius: 16)
@@ -203,7 +208,7 @@ struct AddExpenseSheet: View {
 
     private var dateField: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label("Date", systemImage: "calendar")
+            Label(lang.t("วันที่", "Date"), systemImage: "calendar")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
 
@@ -222,9 +227,12 @@ struct AddExpenseSheet: View {
 
     private var saveButton: some View {
         Button {
-            Task { await viewModel.addExpense() }
+            Task {
+                if isEditMode { await viewModel.updateExpense() }
+                else          { await viewModel.addExpense() }
+            }
         } label: {
-            Text("Save Expense")
+            Text(isEditMode ? lang.t("อัปเดต", "Update") : lang.t("บันทึกรายจ่าย", "Save Expense"))
                 .font(.headline)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)

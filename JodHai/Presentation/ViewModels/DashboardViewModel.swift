@@ -4,7 +4,7 @@ import Observation
 
 // MARK: - Chart Model
 
-struct DailySpend: Identifiable, Sendable {
+struct DailySpend: Identifiable, Equatable, Sendable {
     let id: String         // "yyyy-MM-dd" for stable identity
     let date: Date
     let amount: Double
